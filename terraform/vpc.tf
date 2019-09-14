@@ -6,3 +6,7 @@ resource "aws_vpc" "main" {
   tags = merge(var.common_tags,
   map("Name", "${var.deployment_name}_vpc"))
 }
+
+output "vpc_id" {
+  value = aws_vpc.main.id
+}
