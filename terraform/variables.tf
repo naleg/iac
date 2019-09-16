@@ -38,3 +38,12 @@ variable "availability_zones" {
   type    = "list"
   default = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
+
+variable "ami" {
+  type = "map"
+  default = {
+    ubuntu = {
+      us-east-1 = "ami-024582e76075564db"
+    }
+  }
+}
