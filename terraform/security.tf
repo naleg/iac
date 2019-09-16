@@ -23,6 +23,6 @@ resource "aws_security_group_rule" "allow_all" {
   from_port                = 0
   to_port                  = 65535
   protocol                 = "tcp"
-  source_security_group_id = aws_security_group.allow_all.id
-  security_group_id        = aws_security_group.allow_all.id
+  source_security_group_id = "${aws_security_group.allow_all.id}"
+  security_group_id        = "${aws_security_group.allow_all.id}"
 }
