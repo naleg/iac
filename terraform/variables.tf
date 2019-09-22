@@ -24,8 +24,13 @@ variable "vpc_cidr" {
   default = "192.0.0.0/16"
 }
 
+variable "ssh_key" {
+  type    = "string"
+  default = "gudur"
+}
+
 variable "public_subnet" {
-  type    = "list"
+  type    = "list(string)"
   default = ["192.0.0.0/20", "192.0.16.0/20", "192.0.32.0/20"]
 }
 
