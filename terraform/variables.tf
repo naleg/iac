@@ -30,7 +30,7 @@ variable "ssh_key" {
 }
 
 variable "public_subnet" {
-  type    = "list(string)"
+  type    = list(string)
   default = ["192.0.0.0/20", "192.0.16.0/20", "192.0.32.0/20"]
 }
 
