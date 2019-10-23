@@ -12,8 +12,8 @@ resource "aws_nat_gateway" "gw" {
 resource "aws_route_table" "rtb_private" {
   vpc_id = "${data.aws_subnet.public.vpc_id}"
   route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_nat_gateway.gw.id}"
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = "${aws_nat_gateway.gw.id}"
   }
   tags = "${merge(var.common_tags, map("Name", "${var.deployment_name}-private-gw"))}"
 }
